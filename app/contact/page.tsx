@@ -1,0 +1,69 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { Montserrat, Grandstander } from "next/font/google";
+import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Navbar from "@/components/global/Navbar";
+
+const montserrat = Montserrat({ subsets: ["latin"] });
+const grandstander = Grandstander({ subsets: ["latin"] });
+
+export default function Contact() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Prevent scrolling during animations
+    if (isLoading) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isLoading]);
+
+  return (
+    <div className="h-screen bg-zinc-900">
+      <div className="h-screen flex bg-yellow-100 text-zinc-900 animate-slide-up overflow-hidden">
+        <Navbar />
+        <div className="flex w-1/2 items-center px-6">
+          <div className="flex flex-col space-y-4" data-aos="fade-down" data-aos-delay="800">
+            <h1 
+              className={`font-semibold uppercase text-8xl ${montserrat.className}`}
+            >
+              Contact
+            </h1>
+            <p 
+              className={montserrat.className}
+            >
+              Get in touch with me for collaborations, opportunities, or just to say hello. I'm always excited to connect with new people and discuss interesting projects.
+            </p>
+            <div>
+            <p className={montserrat.className}>Email: <a href="mailto:yuanthiovirly26.9a.tik@gmail.com" className="underline decoration-2">yuanthiovirly26.9a.tik@gmail.com</a></p>
+            <p className={montserrat.className}>On the internet: <a href="https://github.com/yuanthiovirly" target="_blank" rel="noopener noreferrer" className="underline decoration-2">GitHub</a> | <a href="https://www.linkedin.com/in/yuan-thio-virly-7700b2257/" target="_blank" rel="noopener noreferrer" className="underline decoration-2">LinkedIn</a> | <a href="https://instagram.com/yuanthiovirly" target="_blank" rel="noopener noreferrer" className="underline decoration-2">Instagram</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
