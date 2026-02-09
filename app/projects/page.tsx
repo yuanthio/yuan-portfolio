@@ -68,18 +68,32 @@ export default function Projects() {
                 Urban Yuan
               </h1>
             </Link>
-            <Link href="/services">
+            <Link href="/projects/job-matcher">
               <h1
                 className={`${montserrat.className} transition-all duration-300 hover:text-yellow-600 cursor-pointer uppercase`}
               >
                 Job Matcher
               </h1>
             </Link>
-            <Link href="/about">
+            <Link href="/projects/life-admin-assistant">
               <h1
                 className={`${montserrat.className} transition-all duration-300 hover:text-yellow-600 cursor-pointer uppercase`}
               >
                 Life Admin
+              </h1>
+            </Link>
+            <Link href="/projects/circle-app">
+              <h1
+                className={`${montserrat.className} transition-all duration-300 hover:text-yellow-600 cursor-pointer uppercase`}
+              >
+                Circle App
+              </h1>
+            </Link>
+            <Link href="/projects/sipresmagmth34">
+              <h1
+                className={`${montserrat.className} transition-all duration-300 hover:text-yellow-600 cursor-pointer uppercase`}
+              >
+                Sipresmagmth34
               </h1>
             </Link>
             <Link href="/contact">
@@ -87,20 +101,6 @@ export default function Projects() {
                 className={`${montserrat.className} transition-all duration-300 hover:text-yellow-600 cursor-pointer uppercase`}
               >
                 Dinow
-              </h1>
-            </Link>
-            <Link href="/contact">
-              <h1
-                className={`${montserrat.className} transition-all duration-300 hover:text-yellow-600 cursor-pointer uppercase`}
-              >
-                Circle App
-              </h1>
-            </Link>
-            <Link href="/contact">
-              <h1
-                className={`${montserrat.className} transition-all duration-300 hover:text-yellow-600 cursor-pointer uppercase`}
-              >
-                Sipresmagmth34
               </h1>
             </Link>
           </div>

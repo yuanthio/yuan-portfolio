@@ -12,7 +12,7 @@ import Navbar from "@/components/global/Navbar";
 const montserrat = Montserrat({ subsets: ["latin"] });
 const grandslang = Grandstander({ subsets: ["latin"] });
 
-export default function UrbanYuan() {
+export default function Sipresmagmth34() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState<{
     src: string;
@@ -23,71 +23,62 @@ export default function UrbanYuan() {
 
   const allImages = [
     {
-      src: "/projects/urban-yuan/urban-yuan-1.png",
-      alt: "Urban Yuan Homepage",
+      src: "/projects/sipresmagmth34/sipresmagmth34-1.png",
+      alt: "Sipresmagmth34 Dashboard",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-2.png",
-      alt: "Urban Yuan Product Page",
+      src: "/projects/sipresmagmth34/sipresmagmth34-2.png",
+      alt: "Sipresmagmth34 Data Management",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-3.png",
-      alt: "Urban Yuan Product Details",
+      src: "/projects/sipresmagmth34/sipresmagmth34-3.png",
+      alt: "Sipresmagmth34 Analytics View",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-4.png",
-      alt: "Urban Yuan Shopping Cart",
+      src: "/projects/sipresmagmth34/sipresmagmth34-4.png",
+      alt: "Sipresmagmth34 User Interface",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-5.png",
-      alt: "Urban Yuan Checkout",
+      src: "/projects/sipresmagmth34/sipresmagmth34-5.png",
+      alt: "Sipresmagmth34 Settings",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-6.png",
-      alt: "Urban Yuan User Profile",
+      src: "/projects/sipresmagmth34/sipresmagmth34-6.png",
+      alt: "Sipresmagmth34 Reports",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-7.png",
-      alt: "Urban Yuan Search Results",
+      src: "/projects/sipresmagmth34/sipresmagmth34-7.png",
+      alt: "Sipresmagmth34 Mobile View",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-8.png",
-      alt: "Urban Yuan Product Grid",
+      src: "/projects/sipresmagmth34/sipresmagmth34-8.png",
+      alt: "Sipresmagmth34 Integration",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-9.png",
-      alt: "Urban Yuan Mobile View",
+      src: "/projects/sipresmagmth34/sipresmagmth34-9.png",
+      alt: "Sipresmagmth34 Documentation",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-10.png",
-      alt: "Urban Yuan Admin Dashboard",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-11.png",
-      alt: "Urban Yuan Order History",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-12.png",
-      alt: "Urban Yuan Wishlist",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-13.png",
-      alt: "Urban Yuan Payment Page",
+      src: "/projects/sipresmagmth34/sipresmagmth34-10.png",
+      alt: "Sipresmagmth34 Performance Metrics",
     },
   ];
 
   const projects = [
     { name: "Urban Yuan", href: "/projects/urban-yuan" },
     { name: "Job Matcher", href: "/projects/job-matcher" },
-    { name: "Life Admin", href: "/about" },
+    { name: "Life Admin", href: "/projects/life-admin-assistant" },
+    { name: "Circle App", href: "/projects/circle-app" },
+    { name: "Sipresmagmth34", href: "/projects/sipresmagmth34" },
     { name: "Dinow", href: "/contact" },
-    { name: "Circle App", href: "/contact" },
-    { name: "Sipresmagmth34", href: "/contact" },
   ];
 
-  const currentIndex = projects.findIndex(p => p.href === "/projects/urban-yuan");
+  const currentIndex = projects.findIndex(
+    (p) => p.href === "/projects/sipresmagmth34",
+  );
   const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
-  const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
+  const nextProject =
+    currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
 
   const openLightbox = (image: { src: string; alt: string }) => {
     setSelectedImage(image);
@@ -334,14 +325,14 @@ export default function UrbanYuan() {
                   ← Back to Projects
                 </Link>
                 <h1
-                  className={`font-bold uppercase text-8xl ${montserrat.className}`}
+                  className={`font-bold uppercase text-7xl ${montserrat.className}`}
                 >
-                  Urban Yuan
+                  Sipresmagmth34
                 </h1>
                 <p
                   className={`text-2xl font-semibold ${montserrat.className} mt-2`}
                 >
-                  E-Commerce Platform for Urban Fashion
+                  Advanced Data Management & Analytics Platform
                 </p>
               </div>
 
@@ -359,13 +350,12 @@ export default function UrbanYuan() {
                   <p
                     className={`text-lg ${montserrat.className} text-zinc-300`}
                   >
-                    Urban Yuan is a modern full-stack e-commerce application
-                    focused on shoe retail. The project is built with a scalable
-                    architecture that combines a clean, responsive frontend with
-                    a structured backend API. It provides essential e-commerce
-                    features such as product catalog management, user
-                    authentication, image upload and optimization, inventory
-                    handling, and a smooth shopping experience.
+                    SIPRESMAGMTH34 is a web-based attendance system developed
+                    for interns at BPK DKI Jakarta. It features face recognition
+                    for identity verification, geo-location based attendance
+                    validation with radius restriction, and multi-role access
+                    control. The system supports administrators, interns, and
+                    mentors with tailored access and workflows
                   </p>
                 </div>
 
@@ -378,13 +368,19 @@ export default function UrbanYuan() {
                   <ul
                     className={`space-y-2 ${montserrat.className} text-zinc-300`}
                   >
-                    <li>• Product catalog with detailed information</li>
-                    <li>• User authentication (sign in & sign up)</li>
-                    <li>• Product image upload and optimization</li>
-                    <li>• Inventory and stock management</li>
-                    <li>• Shopping cart and checkout flow</li>
-                    <li>• Structured and scalable backend API</li>
-                    <li>• Responsive UI for desktop and mobile devices</li>
+                    <li>
+                      • Real-time face recognition attendance verification
+                    </li>
+                    <li>
+                      • Geo-location attendance validation with configurable
+                      radius
+                    </li>
+                    <li>
+                      • Multi-role access control (Administrator, Intern,
+                      Mentor)
+                    </li>
+                    <li>• Responsive user interface for desktop and mobile</li>
+                    <li>• Database driven with MySQL backend</li>
                   </ul>
                 </div>
 
@@ -396,16 +392,14 @@ export default function UrbanYuan() {
                   </h2>
                   <div className="flex flex-wrap gap-2">
                     {[
-                      "Next.js",
-                      "TypeScript",
-                      "React",
-                      "Tailwind CSS",
-                      "shadcn/ui",
-                      "Express.js",
-                      "PostgreSQL",
-                      "Prisma ORM",
-                      "Supabase",
-                      "Cloudinary",
+                      "PHP (Native)",
+                      "HTML & CSS",
+                      "JavaScript",
+                      "Bootstrap",
+                      "jQuery",
+                      "MySQL",
+                      "Face API.js",
+                      "Leaflet.js",
                     ].map((tech) => (
                       <span
                         key={tech}
@@ -428,23 +422,25 @@ export default function UrbanYuan() {
                       <h3
                         className={`text-xl font-semibold ${montserrat.className} mb-2`}
                       >
-                        Full-Stack Architecture
+                        High-Performance Data Processing
                       </h3>
                       <p className={`${montserrat.className} text-zinc-300`}>
-                        Designed with a clear separation between frontend and
-                        backend, enabling scalability, maintainability, and
-                        clean API communication.
+                        Implements distributed computing architecture to handle
+                        millions of data points efficiently, ensuring real-time
+                        analytics and minimal latency for critical operations.
                       </p>
                     </div>
                     <div className="bg-zinc-800 text-yellow-100 p-6 rounded-lg">
                       <h3
                         className={`text-xl font-semibold ${montserrat.className} mb-2`}
                       >
-                        Optimized Media Handling
+                        Intelligent Data Visualization
                       </h3>
                       <p className={`${montserrat.className} text-zinc-300`}>
-                        Product images are uploaded and optimized to ensure fast
-                        loading times and better overall performance.
+                        Features advanced charting and graphing capabilities
+                        with interactive elements, allowing users to explore
+                        complex datasets through intuitive visual
+                        representations.
                       </p>
                     </div>
                   </div>
@@ -463,14 +459,14 @@ export default function UrbanYuan() {
                       className="lg:col-span-2 relative h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-1.png",
-                          alt: "Urban Yuan Homepage",
+                          src: "/projects/sipresmagmth34/sipresmagmth34-1.png",
+                          alt: "Sipresmagmth34 Dashboard",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-1.png"
-                        alt="Urban Yuan Homepage"
+                        src="/projects/sipresmagmth34/sipresmagmth34-1.png"
+                        alt="Sipresmagmth34 Dashboard"
                         fill
                         className="object-cover"
                       />
@@ -479,14 +475,14 @@ export default function UrbanYuan() {
                       className="relative h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-2.png",
-                          alt: "Urban Yuan Product Page",
+                          src: "/projects/sipresmagmth34/sipresmagmth34-2.png",
+                          alt: "Sipresmagmth34 Data Management",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-2.png"
-                        alt="Urban Yuan Product Page"
+                        src="/projects/sipresmagmth34/sipresmagmth34-2.png"
+                        alt="Sipresmagmth34 Data Management"
                         fill
                         className="object-cover"
                       />
@@ -494,19 +490,19 @@ export default function UrbanYuan() {
                   </div>
 
                   {/* Feature Showcase Row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div
                       className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-3.png",
-                          alt: "Urban Yuan Product Details",
+                          src: "/projects/sipresmagmth34/sipresmagmth34-3.png",
+                          alt: "Sipresmagmth34 Analytics View",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-3.png"
-                        alt="Urban Yuan Product Details"
+                        src="/projects/sipresmagmth34/sipresmagmth34-3.png"
+                        alt="Sipresmagmth34 Analytics View"
                         fill
                         className="object-cover"
                       />
@@ -515,14 +511,14 @@ export default function UrbanYuan() {
                       className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-4.png",
-                          alt: "Urban Yuan Shopping Cart",
+                          src: "/projects/sipresmagmth34/sipresmagmth34-4.png",
+                          alt: "Sipresmagmth34 User Interface",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-4.png"
-                        alt="Urban Yuan Shopping Cart"
+                        src="/projects/sipresmagmth34/sipresmagmth34-4.png"
+                        alt="Sipresmagmth34 User Interface"
                         fill
                         className="object-cover"
                       />
@@ -531,150 +527,98 @@ export default function UrbanYuan() {
                       className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-5.png",
-                          alt: "Urban Yuan Checkout",
+                          src: "/projects/sipresmagmth34/sipresmagmth34-5.png",
+                          alt: "Sipresmagmth34 Settings",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-5.png"
-                        alt="Urban Yuan Checkout"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-6.png",
-                          alt: "Urban Yuan User Profile",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-6.png"
-                        alt="Urban Yuan User Profile"
+                        src="/projects/sipresmagmth34/sipresmagmth34-5.png"
+                        alt="Sipresmagmth34 Settings"
                         fill
                         className="object-cover"
                       />
                     </div>
                   </div>
 
-                  {/* Mixed Layout Row */}
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
+                  {/* Additional Gallery Row */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mt-4">
                     <div
-                      className="relative h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-32 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-7.png",
-                          alt: "Urban Yuan Search Results",
+                          src: "/projects/sipresmagmth34/sipresmagmth34-6.png",
+                          alt: "Sipresmagmth34 Reports",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-7.png"
-                        alt="Urban Yuan Search Results"
+                        src="/projects/sipresmagmth34/sipresmagmth34-6.png"
+                        alt="Sipresmagmth34 Reports"
                         fill
                         className="object-cover"
                       />
                     </div>
                     <div
-                      className="lg:col-span-2 relative h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-32 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-8.png",
-                          alt: "Urban Yuan Product Grid",
+                          src: "/projects/sipresmagmth34/sipresmagmth34-7.png",
+                          alt: "Sipresmagmth34 Mobile View",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-8.png"
-                        alt="Urban Yuan Product Grid"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Final Gallery Row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                    <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-9.png",
-                          alt: "Urban Yuan Mobile View",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-9.png"
-                        alt="Urban Yuan Mobile View"
+                        src="/projects/sipresmagmth34/sipresmagmth34-7.png"
+                        alt="Sipresmagmth34 Mobile View"
                         fill
                         className="object-cover"
                       />
                     </div>
                     <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-32 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-10.png",
-                          alt: "Urban Yuan Admin Dashboard",
+                          src: "/projects/sipresmagmth34/sipresmagmth34-8.png",
+                          alt: "Sipresmagmth34 Integration",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-10.png"
-                        alt="Urban Yuan Admin Dashboard"
+                        src="/projects/sipresmagmth34/sipresmagmth34-8.png"
+                        alt="Sipresmagmth34 Integration"
                         fill
                         className="object-cover"
                       />
                     </div>
                     <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-32 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-11.png",
-                          alt: "Urban Yuan Order History",
+                          src: "/projects/sipresmagmth34/sipresmagmth34-9.png",
+                          alt: "Sipresmagmth34 Documentation",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-11.png"
-                        alt="Urban Yuan Order History"
+                        src="/projects/sipresmagmth34/sipresmagmth34-9.png"
+                        alt="Sipresmagmth34 Documentation"
                         fill
                         className="object-cover"
                       />
                     </div>
                     <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-32 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-12.png",
-                          alt: "Urban Yuan Wishlist",
+                          src: "/projects/sipresmagmth34/sipresmagmth34-10.png",
+                          alt: "Sipresmagmth34 Performance Metrics",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-12.png"
-                        alt="Urban Yuan Wishlist"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-13.png",
-                          alt: "Urban Yuan Payment Page",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-13.png"
-                        alt="Urban Yuan Payment Page"
+                        src="/projects/sipresmagmth34/sipresmagmth34-10.png"
+                        alt="Sipresmagmth34 Performance Metrics"
                         fill
                         className="object-cover"
                       />
@@ -685,14 +629,14 @@ export default function UrbanYuan() {
                 <div className="pt-8">
                   <div className="flex space-x-4 mb-8">
                     <Link
-                      href="https://urban-yuan.vercel.app"
+                      href="https://sipresmagmth34.com/"
                       target="_blank"
                       className="bg-yellow-100 text-zinc-900 px-8 py-3 rounded-lg font-semibold hover:bg-zinc-200 transition-colors duration-300"
                     >
                       View Live Project
                     </Link>
                     <Link
-                      href="https://github.com/yuanthio/urban-yuan"
+                      href="https://github.com/yuanthio/sipresmagmth34"
                       target="_blank"
                       className="border-2 border-yellow-100 text-yellow-100 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-100 hover:text-zinc-900 transition-all duration-300"
                     >
@@ -723,12 +667,14 @@ export default function UrbanYuan() {
                           </svg>
                         </div>
                         <div className="text-left">
-                          <p className="text-sm text-zinc-500">Previous Project</p>
+                          <p className="text-sm text-zinc-500">
+                            Previous Project
+                          </p>
                           <p className="font-semibold">{prevProject.name}</p>
                         </div>
                       </Link>
                     )}
-                    
+
                     <Link
                       href="/projects"
                       className="flex items-center space-x-2 text-zinc-400 hover:text-yellow-100 transition-colors duration-300"

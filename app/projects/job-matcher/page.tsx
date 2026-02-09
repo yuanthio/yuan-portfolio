@@ -12,7 +12,7 @@ import Navbar from "@/components/global/Navbar";
 const montserrat = Montserrat({ subsets: ["latin"] });
 const grandslang = Grandstander({ subsets: ["latin"] });
 
-export default function UrbanYuan() {
+export default function JobMatcher() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState<{
     src: string;
@@ -23,71 +23,46 @@ export default function UrbanYuan() {
 
   const allImages = [
     {
-      src: "/projects/urban-yuan/urban-yuan-1.png",
-      alt: "Urban Yuan Homepage",
+      src: "/projects/job-matcher/job-matcher-1.png",
+      alt: "Job Matcher Beranda",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-2.png",
-      alt: "Urban Yuan Product Page",
+      src: "/projects/job-matcher/job-matcher-2.png",
+      alt: "Job Matcher Pencarian Lowongan",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-3.png",
-      alt: "Urban Yuan Product Details",
+      src: "/projects/job-matcher/job-matcher-3.png",
+      alt: "Job Matcher Detail Lowongan",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-4.png",
-      alt: "Urban Yuan Shopping Cart",
+      src: "/projects/job-matcher/job-matcher-4.png",
+      alt: "Job Matcher Profil Pengguna",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-5.png",
-      alt: "Urban Yuan Checkout",
+      src: "/projects/job-matcher/job-matcher-5.png",
+      alt: "Job Matcher Dashboard Perusahaan",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-6.png",
-      alt: "Urban Yuan User Profile",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-7.png",
-      alt: "Urban Yuan Search Results",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-8.png",
-      alt: "Urban Yuan Product Grid",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-9.png",
-      alt: "Urban Yuan Mobile View",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-10.png",
-      alt: "Urban Yuan Admin Dashboard",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-11.png",
-      alt: "Urban Yuan Order History",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-12.png",
-      alt: "Urban Yuan Wishlist",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-13.png",
-      alt: "Urban Yuan Payment Page",
+      src: "/projects/job-matcher/job-matcher-6.png",
+      alt: "Job Matcher Mobile View",
     },
   ];
 
   const projects = [
     { name: "Urban Yuan", href: "/projects/urban-yuan" },
     { name: "Job Matcher", href: "/projects/job-matcher" },
-    { name: "Life Admin", href: "/about" },
-    { name: "Dinow", href: "/contact" },
+    { name: "Life Admin", href: "/projects/life-admin-assistant" },
     { name: "Circle App", href: "/contact" },
     { name: "Sipresmagmth34", href: "/contact" },
+    { name: "Dinow", href: "/contact" },
   ];
 
-  const currentIndex = projects.findIndex(p => p.href === "/projects/urban-yuan");
+  const currentIndex = projects.findIndex(
+    (p) => p.href === "/projects/job-matcher",
+  );
   const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
-  const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
+  const nextProject =
+    currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
 
   const openLightbox = (image: { src: string; alt: string }) => {
     setSelectedImage(image);
@@ -336,12 +311,12 @@ export default function UrbanYuan() {
                 <h1
                   className={`font-bold uppercase text-8xl ${montserrat.className}`}
                 >
-                  Urban Yuan
+                  Job Matcher
                 </h1>
                 <p
                   className={`text-2xl font-semibold ${montserrat.className} mt-2`}
                 >
-                  E-Commerce Platform for Urban Fashion
+                  A Modern Job Matching Platform
                 </p>
               </div>
 
@@ -359,13 +334,14 @@ export default function UrbanYuan() {
                   <p
                     className={`text-lg ${montserrat.className} text-zinc-300`}
                   >
-                    Urban Yuan is a modern full-stack e-commerce application
-                    focused on shoe retail. The project is built with a scalable
-                    architecture that combines a clean, responsive frontend with
-                    a structured backend API. It provides essential e-commerce
-                    features such as product catalog management, user
-                    authentication, image upload and optimization, inventory
-                    handling, and a smooth shopping experience.
+                    Job Matcher is a modern web application designed to connect
+                    job seekers with companies that are actively hiring. The
+                    platform focuses on simplifying the recruitment process by
+                    providing structured job listings, user profiles, and an
+                    intuitive application flow. It is built with a scalable
+                    architecture and a clean user interface to support both
+                    candidates and recruiters in managing job applications
+                    efficiently.
                   </p>
                 </div>
 
@@ -378,13 +354,13 @@ export default function UrbanYuan() {
                   <ul
                     className={`space-y-2 ${montserrat.className} text-zinc-300`}
                   >
-                    <li>• Product catalog with detailed information</li>
-                    <li>• User authentication (sign in & sign up)</li>
-                    <li>• Product image upload and optimization</li>
-                    <li>• Inventory and stock management</li>
-                    <li>• Shopping cart and checkout flow</li>
-                    <li>• Structured and scalable backend API</li>
-                    <li>• Responsive UI for desktop and mobile devices</li>
+                    <li>• Job listings with detailed descriptions</li>
+                    <li>• Job search and filtering functionality</li>
+                    <li>• User profiles for job seekers</li>
+                    <li>• Company dashboard for managing job postings</li>
+                    <li>• Job application submission flow</li>
+                    <li>• Clean and intuitive user interface</li>
+                    <li>• Fully responsive design for desktop and mobile</li>
                   </ul>
                 </div>
 
@@ -401,11 +377,10 @@ export default function UrbanYuan() {
                       "React",
                       "Tailwind CSS",
                       "shadcn/ui",
-                      "Express.js",
-                      "PostgreSQL",
+                      "Node.js",
+                      "MongoDB",
                       "Prisma ORM",
-                      "Supabase",
-                      "Cloudinary",
+                      "Authentication & Authorization",
                     ].map((tech) => (
                       <span
                         key={tech}
@@ -428,23 +403,24 @@ export default function UrbanYuan() {
                       <h3
                         className={`text-xl font-semibold ${montserrat.className} mb-2`}
                       >
-                        Full-Stack Architecture
+                        Structured Recruitment Flow
                       </h3>
                       <p className={`${montserrat.className} text-zinc-300`}>
-                        Designed with a clear separation between frontend and
-                        backend, enabling scalability, maintainability, and
-                        clean API communication.
+                        Designed to support a clear and structured recruitment
+                        process, from job posting to application submission, for
+                        both candidates and companies.
                       </p>
                     </div>
                     <div className="bg-zinc-800 text-yellow-100 p-6 rounded-lg">
                       <h3
                         className={`text-xl font-semibold ${montserrat.className} mb-2`}
                       >
-                        Optimized Media Handling
+                        Scalable Application Architecture
                       </h3>
                       <p className={`${montserrat.className} text-zinc-300`}>
-                        Product images are uploaded and optimized to ensure fast
-                        loading times and better overall performance.
+                        Built with scalability and maintainability in mind,
+                        enabling future feature expansion and clean data
+                        management.
                       </p>
                     </div>
                   </div>
@@ -463,14 +439,14 @@ export default function UrbanYuan() {
                       className="lg:col-span-2 relative h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-1.png",
-                          alt: "Urban Yuan Homepage",
+                          src: "/projects/job-matcher/job-matcher-1.png",
+                          alt: "Job Matcher Beranda",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-1.png"
-                        alt="Urban Yuan Homepage"
+                        src="/projects/job-matcher/job-matcher-1.png"
+                        alt="Job Matcher Beranda"
                         fill
                         className="object-cover"
                       />
@@ -479,14 +455,14 @@ export default function UrbanYuan() {
                       className="relative h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-2.png",
-                          alt: "Urban Yuan Product Page",
+                          src: "/projects/job-matcher/job-matcher-2.png",
+                          alt: "Job Matcher Pencarian Lowongan",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-2.png"
-                        alt="Urban Yuan Product Page"
+                        src="/projects/job-matcher/job-matcher-2.png"
+                        alt="Job Matcher Pencarian Lowongan"
                         fill
                         className="object-cover"
                       />
@@ -499,14 +475,14 @@ export default function UrbanYuan() {
                       className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-3.png",
-                          alt: "Urban Yuan Product Details",
+                          src: "/projects/job-matcher/job-matcher-3.png",
+                          alt: "Job Matcher Detail Lowongan",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-3.png"
-                        alt="Urban Yuan Product Details"
+                        src="/projects/job-matcher/job-matcher-3.png"
+                        alt="Job Matcher Detail Lowongan"
                         fill
                         className="object-cover"
                       />
@@ -515,14 +491,14 @@ export default function UrbanYuan() {
                       className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-4.png",
-                          alt: "Urban Yuan Shopping Cart",
+                          src: "/projects/job-matcher/job-matcher-4.png",
+                          alt: "Job Matcher Profil Pengguna",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-4.png"
-                        alt="Urban Yuan Shopping Cart"
+                        src="/projects/job-matcher/job-matcher-4.png"
+                        alt="Job Matcher Profil Pengguna"
                         fill
                         className="object-cover"
                       />
@@ -531,14 +507,14 @@ export default function UrbanYuan() {
                       className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-5.png",
-                          alt: "Urban Yuan Checkout",
+                          src: "/projects/job-matcher/job-matcher-5.png",
+                          alt: "Job Matcher Dashboard Perusahaan",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-5.png"
-                        alt="Urban Yuan Checkout"
+                        src="/projects/job-matcher/job-matcher-5.png"
+                        alt="Job Matcher Dashboard Perusahaan"
                         fill
                         className="object-cover"
                       />
@@ -547,134 +523,14 @@ export default function UrbanYuan() {
                       className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-6.png",
-                          alt: "Urban Yuan User Profile",
+                          src: "/projects/job-matcher/job-matcher-6.png",
+                          alt: "Job Matcher Mobile View",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-6.png"
-                        alt="Urban Yuan User Profile"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Mixed Layout Row */}
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
-                    <div
-                      className="relative h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-7.png",
-                          alt: "Urban Yuan Search Results",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-7.png"
-                        alt="Urban Yuan Search Results"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="lg:col-span-2 relative h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-8.png",
-                          alt: "Urban Yuan Product Grid",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-8.png"
-                        alt="Urban Yuan Product Grid"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Final Gallery Row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                    <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-9.png",
-                          alt: "Urban Yuan Mobile View",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-9.png"
-                        alt="Urban Yuan Mobile View"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-10.png",
-                          alt: "Urban Yuan Admin Dashboard",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-10.png"
-                        alt="Urban Yuan Admin Dashboard"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-11.png",
-                          alt: "Urban Yuan Order History",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-11.png"
-                        alt="Urban Yuan Order History"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-12.png",
-                          alt: "Urban Yuan Wishlist",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-12.png"
-                        alt="Urban Yuan Wishlist"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-13.png",
-                          alt: "Urban Yuan Payment Page",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-13.png"
-                        alt="Urban Yuan Payment Page"
+                        src="/projects/job-matcher/job-matcher-6.png"
+                        alt="Job Matcher Mobile View"
                         fill
                         className="object-cover"
                       />
@@ -685,14 +541,14 @@ export default function UrbanYuan() {
                 <div className="pt-8">
                   <div className="flex space-x-4 mb-8">
                     <Link
-                      href="https://urban-yuan.vercel.app"
+                      href="https://job-matcher-eight.vercel.app/"
                       target="_blank"
                       className="bg-yellow-100 text-zinc-900 px-8 py-3 rounded-lg font-semibold hover:bg-zinc-200 transition-colors duration-300"
                     >
                       View Live Project
                     </Link>
                     <Link
-                      href="https://github.com/yuanthio/urban-yuan"
+                      href="https://github.com/yuanthio/job-matcher"
                       target="_blank"
                       className="border-2 border-yellow-100 text-yellow-100 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-100 hover:text-zinc-900 transition-all duration-300"
                     >
@@ -723,12 +579,14 @@ export default function UrbanYuan() {
                           </svg>
                         </div>
                         <div className="text-left">
-                          <p className="text-sm text-zinc-500">Previous Project</p>
+                          <p className="text-sm text-zinc-500">
+                            Previous Project
+                          </p>
                           <p className="font-semibold">{prevProject.name}</p>
                         </div>
                       </Link>
                     )}
-                    
+
                     <Link
                       href="/projects"
                       className="flex items-center space-x-2 text-zinc-400 hover:text-yellow-100 transition-colors duration-300"

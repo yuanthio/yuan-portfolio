@@ -12,7 +12,7 @@ import Navbar from "@/components/global/Navbar";
 const montserrat = Montserrat({ subsets: ["latin"] });
 const grandslang = Grandstander({ subsets: ["latin"] });
 
-export default function UrbanYuan() {
+export default function CircleApp() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState<{
     src: string;
@@ -23,71 +23,38 @@ export default function UrbanYuan() {
 
   const allImages = [
     {
-      src: "/projects/urban-yuan/urban-yuan-1.png",
-      alt: "Urban Yuan Homepage",
+      src: "/projects/circle-app/circle-app-1.png",
+      alt: "Circle App Dashboard",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-2.png",
-      alt: "Urban Yuan Product Page",
+      src: "/projects/circle-app/circle-app-2.png",
+      alt: "Circle App Community Feed",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-3.png",
-      alt: "Urban Yuan Product Details",
+      src: "/projects/circle-app/circle-app-3.png",
+      alt: "Circle App User Profile",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-4.png",
-      alt: "Urban Yuan Shopping Cart",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-5.png",
-      alt: "Urban Yuan Checkout",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-6.png",
-      alt: "Urban Yuan User Profile",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-7.png",
-      alt: "Urban Yuan Search Results",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-8.png",
-      alt: "Urban Yuan Product Grid",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-9.png",
-      alt: "Urban Yuan Mobile View",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-10.png",
-      alt: "Urban Yuan Admin Dashboard",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-11.png",
-      alt: "Urban Yuan Order History",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-12.png",
-      alt: "Urban Yuan Wishlist",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-13.png",
-      alt: "Urban Yuan Payment Page",
+      src: "/projects/circle-app/circle-app-4.png",
+      alt: "Circle App Mobile View",
     },
   ];
 
   const projects = [
     { name: "Urban Yuan", href: "/projects/urban-yuan" },
     { name: "Job Matcher", href: "/projects/job-matcher" },
-    { name: "Life Admin", href: "/about" },
+    { name: "Life Admin", href: "/projects/life-admin-assistant" },
+    { name: "Circle App", href: "/projects/circle-app" },
+    { name: "Sipresmagmth34", href: "/projects/sipresmagmth34" },
     { name: "Dinow", href: "/contact" },
-    { name: "Circle App", href: "/contact" },
-    { name: "Sipresmagmth34", href: "/contact" },
   ];
 
-  const currentIndex = projects.findIndex(p => p.href === "/projects/urban-yuan");
+  const currentIndex = projects.findIndex(
+    (p) => p.href === "/projects/circle-app",
+  );
   const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
-  const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
+  const nextProject =
+    currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
 
   const openLightbox = (image: { src: string; alt: string }) => {
     setSelectedImage(image);
@@ -336,12 +303,12 @@ export default function UrbanYuan() {
                 <h1
                   className={`font-bold uppercase text-8xl ${montserrat.className}`}
                 >
-                  Urban Yuan
+                  Circle App
                 </h1>
                 <p
                   className={`text-2xl font-semibold ${montserrat.className} mt-2`}
                 >
-                  E-Commerce Platform for Urban Fashion
+                  Social Community Platform for Interest-Based Groups
                 </p>
               </div>
 
@@ -359,13 +326,14 @@ export default function UrbanYuan() {
                   <p
                     className={`text-lg ${montserrat.className} text-zinc-300`}
                   >
-                    Urban Yuan is a modern full-stack e-commerce application
-                    focused on shoe retail. The project is built with a scalable
-                    architecture that combines a clean, responsive frontend with
-                    a structured backend API. It provides essential e-commerce
-                    features such as product catalog management, user
-                    authentication, image upload and optimization, inventory
-                    handling, and a smooth shopping experience.
+                    Circle App is a web-based real-time social platform inspired
+                    by Twitter, featuring live posts, community circles, and
+                    interactive user engagement. Built with a scalable
+                    full-stack architecture, it employs WebSockets for instant
+                    communication, Redis for performance optimization, and
+                    Docker for easy setup. The application offers users a
+                    seamless experience to share content, join circles, and
+                    interact with others instantly.
                   </p>
                 </div>
 
@@ -378,13 +346,17 @@ export default function UrbanYuan() {
                   <ul
                     className={`space-y-2 ${montserrat.className} text-zinc-300`}
                   >
-                    <li>• Product catalog with detailed information</li>
-                    <li>• User authentication (sign in & sign up)</li>
-                    <li>• Product image upload and optimization</li>
-                    <li>• Inventory and stock management</li>
-                    <li>• Shopping cart and checkout flow</li>
-                    <li>• Structured and scalable backend API</li>
-                    <li>• Responsive UI for desktop and mobile devices</li>
+                    <li>
+                      • Real-time posts and live interaction using WebSockets
+                    </li>
+                    <li>• Community circles for focused discussions</li>
+                    <li>• Redis caching for faster data performance</li>
+                    <li>
+                      • Scalable full-stack architecture with backend & frontend
+                      separation
+                    </li>
+                    <li>• Secure user authentication and session management</li>
+                    <li>• Dockerized development & deployment workflow</li>
                   </ul>
                 </div>
 
@@ -396,16 +368,15 @@ export default function UrbanYuan() {
                   </h2>
                   <div className="flex flex-wrap gap-2">
                     {[
-                      "Next.js",
-                      "TypeScript",
                       "React",
+                      "TypeScript",
                       "Tailwind CSS",
                       "shadcn/ui",
                       "Express.js",
                       "PostgreSQL",
-                      "Prisma ORM",
-                      "Supabase",
-                      "Cloudinary",
+                      "Redis",
+                      "WebSocket (socket.io)",
+                      "Docker",
                     ].map((tech) => (
                       <span
                         key={tech}
@@ -428,23 +399,24 @@ export default function UrbanYuan() {
                       <h3
                         className={`text-xl font-semibold ${montserrat.className} mb-2`}
                       >
-                        Full-Stack Architecture
+                        Real-Time Communication
                       </h3>
                       <p className={`${montserrat.className} text-zinc-300`}>
-                        Designed with a clear separation between frontend and
-                        backend, enabling scalability, maintainability, and
-                        clean API communication.
+                        Leveraging WebSockets, Circle App supports real-time
+                        posts and instant interactions, creating a live social
+                        experience.
                       </p>
                     </div>
                     <div className="bg-zinc-800 text-yellow-100 p-6 rounded-lg">
                       <h3
                         className={`text-xl font-semibold ${montserrat.className} mb-2`}
                       >
-                        Optimized Media Handling
+                        Scalable Architecture
                       </h3>
                       <p className={`${montserrat.className} text-zinc-300`}>
-                        Product images are uploaded and optimized to ensure fast
-                        loading times and better overall performance.
+                        With Redis caching and Dockerized deployment, the
+                        application is built for performance, reliability, and
+                        easy development setup.
                       </p>
                     </div>
                   </div>
@@ -458,19 +430,19 @@ export default function UrbanYuan() {
                   </h2>
 
                   {/* Hero Gallery Row */}
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
                     <div
-                      className="lg:col-span-2 relative h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-1.png",
-                          alt: "Urban Yuan Homepage",
+                          src: "/projects/circle-app/circle-app-1.png",
+                          alt: "Circle App Dashboard",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-1.png"
-                        alt="Urban Yuan Homepage"
+                        src="/projects/circle-app/circle-app-1.png"
+                        alt="Circle App Dashboard"
                         fill
                         className="object-cover"
                       />
@@ -479,14 +451,14 @@ export default function UrbanYuan() {
                       className="relative h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-2.png",
-                          alt: "Urban Yuan Product Page",
+                          src: "/projects/circle-app/circle-app-2.png",
+                          alt: "Circle App Community Feed",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-2.png"
-                        alt="Urban Yuan Product Page"
+                        src="/projects/circle-app/circle-app-2.png"
+                        alt="Circle App Community Feed"
                         fill
                         className="object-cover"
                       />
@@ -494,187 +466,35 @@ export default function UrbanYuan() {
                   </div>
 
                   {/* Feature Showcase Row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-                    <div
-                      className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-3.png",
-                          alt: "Urban Yuan Product Details",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-3.png"
-                        alt="Urban Yuan Product Details"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-4.png",
-                          alt: "Urban Yuan Shopping Cart",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-4.png"
-                        alt="Urban Yuan Shopping Cart"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-5.png",
-                          alt: "Urban Yuan Checkout",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-5.png"
-                        alt="Urban Yuan Checkout"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-6.png",
-                          alt: "Urban Yuan User Profile",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-6.png"
-                        alt="Urban Yuan User Profile"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Mixed Layout Row */}
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div
                       className="relative h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-7.png",
-                          alt: "Urban Yuan Search Results",
+                          src: "/projects/circle-app/circle-app-3.png",
+                          alt: "Circle App User Profile",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-7.png"
-                        alt="Urban Yuan Search Results"
+                        src="/projects/circle-app/circle-app-3.png"
+                        alt="Circle App User Profile"
                         fill
                         className="object-cover"
                       />
                     </div>
                     <div
-                      className="lg:col-span-2 relative h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-8.png",
-                          alt: "Urban Yuan Product Grid",
+                          src: "/projects/circle-app/circle-app-4.png",
+                          alt: "Circle App Mobile View",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-8.png"
-                        alt="Urban Yuan Product Grid"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Final Gallery Row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                    <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-9.png",
-                          alt: "Urban Yuan Mobile View",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-9.png"
-                        alt="Urban Yuan Mobile View"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-10.png",
-                          alt: "Urban Yuan Admin Dashboard",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-10.png"
-                        alt="Urban Yuan Admin Dashboard"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-11.png",
-                          alt: "Urban Yuan Order History",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-11.png"
-                        alt="Urban Yuan Order History"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-12.png",
-                          alt: "Urban Yuan Wishlist",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-12.png"
-                        alt="Urban Yuan Wishlist"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-13.png",
-                          alt: "Urban Yuan Payment Page",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-13.png"
-                        alt="Urban Yuan Payment Page"
+                        src="/projects/circle-app/circle-app-4.png"
+                        alt="Circle App Mobile View"
                         fill
                         className="object-cover"
                       />
@@ -685,14 +505,14 @@ export default function UrbanYuan() {
                 <div className="pt-8">
                   <div className="flex space-x-4 mb-8">
                     <Link
-                      href="https://urban-yuan.vercel.app"
+                      href="#"
                       target="_blank"
                       className="bg-yellow-100 text-zinc-900 px-8 py-3 rounded-lg font-semibold hover:bg-zinc-200 transition-colors duration-300"
                     >
                       View Live Project
                     </Link>
                     <Link
-                      href="https://github.com/yuanthio/urban-yuan"
+                      href="https://github.com/yuanthio/circle-app"
                       target="_blank"
                       className="border-2 border-yellow-100 text-yellow-100 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-100 hover:text-zinc-900 transition-all duration-300"
                     >
@@ -723,12 +543,14 @@ export default function UrbanYuan() {
                           </svg>
                         </div>
                         <div className="text-left">
-                          <p className="text-sm text-zinc-500">Previous Project</p>
+                          <p className="text-sm text-zinc-500">
+                            Previous Project
+                          </p>
                           <p className="font-semibold">{prevProject.name}</p>
                         </div>
                       </Link>
                     )}
-                    
+
                     <Link
                       href="/projects"
                       className="flex items-center space-x-2 text-zinc-400 hover:text-yellow-100 transition-colors duration-300"

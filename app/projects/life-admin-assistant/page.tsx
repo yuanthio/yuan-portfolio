@@ -12,7 +12,7 @@ import Navbar from "@/components/global/Navbar";
 const montserrat = Montserrat({ subsets: ["latin"] });
 const grandslang = Grandstander({ subsets: ["latin"] });
 
-export default function UrbanYuan() {
+export default function LifeAdminAssistant() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState<{
     src: string;
@@ -23,71 +23,44 @@ export default function UrbanYuan() {
 
   const allImages = [
     {
-      src: "/projects/urban-yuan/urban-yuan-1.png",
-      alt: "Urban Yuan Homepage",
+      src: "/projects/life-admin-assistant/life-admin-assistant-1.png",
+      alt: "Life Admin Assistant Dashboard",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-2.png",
-      alt: "Urban Yuan Product Page",
+      src: "/projects/life-admin-assistant/life-admin-assistant-2.png",
+      alt: "Life Admin Assistant Task Management",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-3.png",
-      alt: "Urban Yuan Product Details",
+      src: "/projects/life-admin-assistant/life-admin-assistant-3.png",
+      alt: "Life Admin Assistant Calendar View",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-4.png",
-      alt: "Urban Yuan Shopping Cart",
+      src: "/projects/life-admin-assistant/life-admin-assistant-4.png",
+      alt: "Life Admin Assistant Analytics",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-5.png",
-      alt: "Urban Yuan Checkout",
+      src: "/projects/life-admin-assistant/life-admin-assistant-5.png",
+      alt: "Life Admin Assistant Mobile View",
     },
     {
-      src: "/projects/urban-yuan/urban-yuan-6.png",
-      alt: "Urban Yuan User Profile",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-7.png",
-      alt: "Urban Yuan Search Results",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-8.png",
-      alt: "Urban Yuan Product Grid",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-9.png",
-      alt: "Urban Yuan Mobile View",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-10.png",
-      alt: "Urban Yuan Admin Dashboard",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-11.png",
-      alt: "Urban Yuan Order History",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-12.png",
-      alt: "Urban Yuan Wishlist",
-    },
-    {
-      src: "/projects/urban-yuan/urban-yuan-13.png",
-      alt: "Urban Yuan Payment Page",
+      src: "/projects/life-admin-assistant/life-admin-assistant-6.png",
+      alt: "Life Admin Assistant Settings",
     },
   ];
 
   const projects = [
     { name: "Urban Yuan", href: "/projects/urban-yuan" },
     { name: "Job Matcher", href: "/projects/job-matcher" },
-    { name: "Life Admin", href: "/about" },
+    { name: "Life Admin", href: "/projects/life-admin-assistant" },
+    { name: "Circle App", href: "/projects/circle-app" },
+    { name: "Sipresmagmth34", href: "/projects/sipresmagmth34" },
     { name: "Dinow", href: "/contact" },
-    { name: "Circle App", href: "/contact" },
-    { name: "Sipresmagmth34", href: "/contact" },
   ];
 
-  const currentIndex = projects.findIndex(p => p.href === "/projects/urban-yuan");
+  const currentIndex = projects.findIndex((p) => p.href === "/projects/life-admin-assistant");
   const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
-  const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
+  const nextProject =
+    currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
 
   const openLightbox = (image: { src: string; alt: string }) => {
     setSelectedImage(image);
@@ -336,12 +309,12 @@ export default function UrbanYuan() {
                 <h1
                   className={`font-bold uppercase text-8xl ${montserrat.className}`}
                 >
-                  Urban Yuan
+                  Life Admin
                 </h1>
                 <p
                   className={`text-2xl font-semibold ${montserrat.className} mt-2`}
                 >
-                  E-Commerce Platform for Urban Fashion
+                  Personal Productivity & Task Management Assistant
                 </p>
               </div>
 
@@ -359,13 +332,14 @@ export default function UrbanYuan() {
                   <p
                     className={`text-lg ${montserrat.className} text-zinc-300`}
                   >
-                    Urban Yuan is a modern full-stack e-commerce application
-                    focused on shoe retail. The project is built with a scalable
-                    architecture that combines a clean, responsive frontend with
-                    a structured backend API. It provides essential e-commerce
-                    features such as product catalog management, user
-                    authentication, image upload and optimization, inventory
-                    handling, and a smooth shopping experience.
+                    Life Admin Assistant is a full-stack web application
+                    designed to help users manage and track everyday
+                    administrative obligations such as utility bills,
+                    subscriptions, and vehicle taxes. The app combines
+                    structured task management, predefined templates, and
+                    AI-powered reminders to ensure important deadlines are never
+                    missed. It features a clean, modern interface and responsive
+                    experience across devices.
                   </p>
                 </div>
 
@@ -378,13 +352,21 @@ export default function UrbanYuan() {
                   <ul
                     className={`space-y-2 ${montserrat.className} text-zinc-300`}
                   >
-                    <li>• Product catalog with detailed information</li>
-                    <li>• User authentication (sign in & sign up)</li>
-                    <li>• Product image upload and optimization</li>
-                    <li>• Inventory and stock management</li>
-                    <li>• Shopping cart and checkout flow</li>
-                    <li>• Structured and scalable backend API</li>
-                    <li>• Responsive UI for desktop and mobile devices</li>
+                    <li>
+                      • Administrative deadline tracking for bills and
+                      subscriptions
+                    </li>
+                    <li>
+                      • Predefined templates for common tasks and obligations
+                    </li>
+                    <li>
+                      • AI-powered reminder suggestions to prevent missed dates
+                    </li>
+                    <li>• Secure user authentication and management</li>
+                    <li>• Clean and responsive user interface</li>
+                    <li>
+                      • Structured and maintainable full-stack architecture
+                    </li>
                   </ul>
                 </div>
 
@@ -403,9 +385,7 @@ export default function UrbanYuan() {
                       "shadcn/ui",
                       "Express.js",
                       "PostgreSQL",
-                      "Prisma ORM",
-                      "Supabase",
-                      "Cloudinary",
+                      "Supabase (Auth & DB)",
                     ].map((tech) => (
                       <span
                         key={tech}
@@ -428,23 +408,24 @@ export default function UrbanYuan() {
                       <h3
                         className={`text-xl font-semibold ${montserrat.className} mb-2`}
                       >
-                        Full-Stack Architecture
+                        Comprehensive Admin Management
                       </h3>
                       <p className={`${montserrat.className} text-zinc-300`}>
-                        Designed with a clear separation between frontend and
-                        backend, enabling scalability, maintainability, and
-                        clean API communication.
+                        Enables users to effectively manage recurring
+                        administrative tasks such as utilities, subscriptions,
+                        and taxes from a central dashboard.
                       </p>
                     </div>
                     <div className="bg-zinc-800 text-yellow-100 p-6 rounded-lg">
                       <h3
                         className={`text-xl font-semibold ${montserrat.className} mb-2`}
                       >
-                        Optimized Media Handling
+                        AI-Driven Reminder System
                       </h3>
                       <p className={`${montserrat.className} text-zinc-300`}>
-                        Product images are uploaded and optimized to ensure fast
-                        loading times and better overall performance.
+                        Smart reminders and suggestions help users stay on top
+                        of deadlines and never miss important administrative
+                        deadlines.
                       </p>
                     </div>
                   </div>
@@ -463,14 +444,14 @@ export default function UrbanYuan() {
                       className="lg:col-span-2 relative h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-1.png",
-                          alt: "Urban Yuan Homepage",
+                          src: "/projects/life-admin-assistant/life-admin-assistant-1.png",
+                          alt: "Life Admin Assistant Dashboard",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-1.png"
-                        alt="Urban Yuan Homepage"
+                        src="/projects/life-admin-assistant/life-admin-assistant-1.png"
+                        alt="Life Admin Assistant Dashboard"
                         fill
                         className="object-cover"
                       />
@@ -479,14 +460,14 @@ export default function UrbanYuan() {
                       className="relative h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-2.png",
-                          alt: "Urban Yuan Product Page",
+                          src: "/projects/life-admin-assistant/life-admin-assistant-2.png",
+                          alt: "Life Admin Assistant Task Management",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-2.png"
-                        alt="Urban Yuan Product Page"
+                        src="/projects/life-admin-assistant/life-admin-assistant-2.png"
+                        alt="Life Admin Assistant Task Management"
                         fill
                         className="object-cover"
                       />
@@ -499,14 +480,14 @@ export default function UrbanYuan() {
                       className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-3.png",
-                          alt: "Urban Yuan Product Details",
+                          src: "/projects/life-admin-assistant/life-admin-assistant-3.png",
+                          alt: "Life Admin Assistant Calendar View",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-3.png"
-                        alt="Urban Yuan Product Details"
+                        src="/projects/life-admin-assistant/life-admin-assistant-3.png"
+                        alt="Life Admin Assistant Calendar View"
                         fill
                         className="object-cover"
                       />
@@ -515,14 +496,14 @@ export default function UrbanYuan() {
                       className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-4.png",
-                          alt: "Urban Yuan Shopping Cart",
+                          src: "/projects/life-admin-assistant/life-admin-assistant-4.png",
+                          alt: "Life Admin Assistant Analytics",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-4.png"
-                        alt="Urban Yuan Shopping Cart"
+                        src="/projects/life-admin-assistant/life-admin-assistant-4.png"
+                        alt="Life Admin Assistant Analytics"
                         fill
                         className="object-cover"
                       />
@@ -531,14 +512,14 @@ export default function UrbanYuan() {
                       className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-5.png",
-                          alt: "Urban Yuan Checkout",
+                          src: "/projects/life-admin-assistant/life-admin-assistant-5.png",
+                          alt: "Life Admin Assistant Mobile View",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-5.png"
-                        alt="Urban Yuan Checkout"
+                        src="/projects/life-admin-assistant/life-admin-assistant-5.png"
+                        alt="Life Admin Assistant Mobile View"
                         fill
                         className="object-cover"
                       />
@@ -547,134 +528,14 @@ export default function UrbanYuan() {
                       className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-6.png",
-                          alt: "Urban Yuan User Profile",
+                          src: "/projects/life-admin-assistant/life-admin-assistant-6.png",
+                          alt: "Life Admin Assistant Settings",
                         })
                       }
                     >
                       <Image
-                        src="/projects/urban-yuan/urban-yuan-6.png"
-                        alt="Urban Yuan User Profile"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Mixed Layout Row */}
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
-                    <div
-                      className="relative h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-7.png",
-                          alt: "Urban Yuan Search Results",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-7.png"
-                        alt="Urban Yuan Search Results"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="lg:col-span-2 relative h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-8.png",
-                          alt: "Urban Yuan Product Grid",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-8.png"
-                        alt="Urban Yuan Product Grid"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Final Gallery Row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                    <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-9.png",
-                          alt: "Urban Yuan Mobile View",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-9.png"
-                        alt="Urban Yuan Mobile View"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-10.png",
-                          alt: "Urban Yuan Admin Dashboard",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-10.png"
-                        alt="Urban Yuan Admin Dashboard"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-11.png",
-                          alt: "Urban Yuan Order History",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-11.png"
-                        alt="Urban Yuan Order History"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-12.png",
-                          alt: "Urban Yuan Wishlist",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-12.png"
-                        alt="Urban Yuan Wishlist"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/urban-yuan/urban-yuan-13.png",
-                          alt: "Urban Yuan Payment Page",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/urban-yuan/urban-yuan-13.png"
-                        alt="Urban Yuan Payment Page"
+                        src="/projects/life-admin-assistant/life-admin-assistant-6.png"
+                        alt="Life Admin Assistant Settings"
                         fill
                         className="object-cover"
                       />
@@ -685,14 +546,14 @@ export default function UrbanYuan() {
                 <div className="pt-8">
                   <div className="flex space-x-4 mb-8">
                     <Link
-                      href="https://urban-yuan.vercel.app"
+                      href="#"
                       target="_blank"
                       className="bg-yellow-100 text-zinc-900 px-8 py-3 rounded-lg font-semibold hover:bg-zinc-200 transition-colors duration-300"
                     >
                       View Live Project
                     </Link>
                     <Link
-                      href="https://github.com/yuanthio/urban-yuan"
+                      href="https://github.com/yuanthio/life-admin-assistant"
                       target="_blank"
                       className="border-2 border-yellow-100 text-yellow-100 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-100 hover:text-zinc-900 transition-all duration-300"
                     >
@@ -723,12 +584,14 @@ export default function UrbanYuan() {
                           </svg>
                         </div>
                         <div className="text-left">
-                          <p className="text-sm text-zinc-500">Previous Project</p>
+                          <p className="text-sm text-zinc-500">
+                            Previous Project
+                          </p>
                           <p className="font-semibold">{prevProject.name}</p>
                         </div>
                       </Link>
                     )}
-                    
+
                     <Link
                       href="/projects"
                       className="flex items-center space-x-2 text-zinc-400 hover:text-yellow-100 transition-colors duration-300"
