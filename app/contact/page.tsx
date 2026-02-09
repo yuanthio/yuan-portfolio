@@ -59,7 +59,7 @@ export default function Contact() {
             </p>
             <div>
             <p className={montserrat.className}>Email: <a href="mailto:yuanthiovirly26.9a.tik@gmail.com" className="underline decoration-2">yuanthiovirly26.9a.tik@gmail.com</a></p>
-            <p className={montserrat.className}>On the internet: <a href="https://github.com/yuanthiovirly" target="_blank" rel="noopener noreferrer" className="underline decoration-2">GitHub</a> | <a href="https://www.linkedin.com/in/yuan-thio-virly-7700b2257/" target="_blank" rel="noopener noreferrer" className="underline decoration-2">LinkedIn</a> | <a href="https://instagram.com/yuanthiovirly" target="_blank" rel="noopener noreferrer" className="underline decoration-2">Instagram</a></p>
+            <p className={montserrat.className}>On the internet: <a href="https://github.com/yuanthiovirly" target="_blank" rel="noopener noreferrer" className="underline decoration-2">GitHub</a> | <a href="https://www.linkedin.com/in/yuanthio-virly/" target="_blank" rel="noopener noreferrer" className="underline decoration-2">LinkedIn</a> | <a href="https://instagram.com/yuanthiovirly" target="_blank" rel="noopener noreferrer" className="underline decoration-2">Instagram</a></p>
             </div>
           </div>
         </div>
