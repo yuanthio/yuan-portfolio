@@ -321,11 +321,11 @@ export default function UrbanYuan() {
         </div>
       )}
 
-      <div className="h-screen flex gap-8 bg-zinc-900 text-yellow-100 overflow-hidden">
+      <div className="h-screen flex bg-zinc-900 text-yellow-100 overflow-hidden">
         <Navbar darkMode={true} menuText="Projects" menuHref="/projects" />
         <div className="flex flex-1 justify-center overflow-hidden">
-          <div className="w-full max-w-4xl flex-col px-6 py-30 overflow-y-auto scrollbar-hide">
-            <div className="flex flex-col space-y-8">
+          <div className="w-full max-w-4xl flex-col px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 overflow-y-auto scrollbar-hide">
+            <div className="flex flex-col space-y-6 sm:space-y-8">
               <div data-aos="fade-down" data-aos-delay="200">
                 <Link
                   href="/projects"
@@ -334,12 +334,12 @@ export default function UrbanYuan() {
                   ← Back to Projects
                 </Link>
                 <h1
-                  className={`font-bold uppercase text-8xl ${montserrat.className}`}
+                  className={`font-bold uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl ${montserrat.className}`}
                 >
                   Urban Yuan
                 </h1>
                 <p
-                  className={`text-2xl font-semibold ${montserrat.className} mt-2`}
+                  className={`text-lg sm:text-xl md:text-2xl font-semibold ${montserrat.className} mt-2`}
                 >
                   E-Commerce Platform for Urban Fashion
                 </p>
@@ -352,12 +352,12 @@ export default function UrbanYuan() {
               >
                 <div>
                   <h2
-                    className={`text-3xl font-bold ${montserrat.className} mb-4`}
+                    className={`text-2xl sm:text-3xl font-bold ${montserrat.className} mb-4`}
                   >
                     Project Overview
                   </h2>
                   <p
-                    className={`text-lg ${montserrat.className} text-zinc-300`}
+                    className={`text-sm sm:text-base md:text-lg ${montserrat.className} text-zinc-300`}
                   >
                     Urban Yuan is a modern full-stack e-commerce application
                     focused on shoe retail. The project is built with a scalable
@@ -371,12 +371,12 @@ export default function UrbanYuan() {
 
                 <div>
                   <h2
-                    className={`text-3xl font-bold ${montserrat.className} mb-4`}
+                    className={`text-2xl sm:text-3xl font-bold ${montserrat.className} mb-4`}
                   >
                     Key Features
                   </h2>
                   <ul
-                    className={`space-y-2 ${montserrat.className} text-zinc-300`}
+                    className={`space-y-2 ${montserrat.className} text-sm sm:text-base md:text-lg text-zinc-300`}
                   >
                     <li>• Product catalog with detailed information</li>
                     <li>• User authentication (sign in & sign up)</li>
@@ -390,7 +390,7 @@ export default function UrbanYuan() {
 
                 <div>
                   <h2
-                    className={`text-3xl font-bold ${montserrat.className} mb-4`}
+                    className={`text-2xl sm:text-3xl font-bold ${montserrat.className} mb-4`}
                   >
                     Technologies Used
                   </h2>
@@ -452,7 +452,7 @@ export default function UrbanYuan() {
 
                 <div>
                   <h2
-                    className={`text-3xl font-bold ${montserrat.className} mb-4`}
+                    className={`text-2xl sm:text-3xl font-bold ${montserrat.className} mb-4`}
                   >
                     Project Gallery
                   </h2>
@@ -460,7 +460,7 @@ export default function UrbanYuan() {
                   {/* Hero Gallery Row */}
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
                     <div
-                      className="lg:col-span-2 relative h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="lg:col-span-2 relative h-64 sm:h-80 lg:h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
                           src: "/projects/urban-yuan/urban-yuan-1.png",
@@ -476,7 +476,7 @@ export default function UrbanYuan() {
                       />
                     </div>
                     <div
-                      className="relative h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-64 sm:h-80 lg:h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
                           src: "/projects/urban-yuan/urban-yuan-2.png",
@@ -494,9 +494,9 @@ export default function UrbanYuan() {
                   </div>
 
                   {/* Feature Showcase Row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                     <div
-                      className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-32 sm:h-40 md:h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
                           src: "/projects/urban-yuan/urban-yuan-3.png",
@@ -512,7 +512,7 @@ export default function UrbanYuan() {
                       />
                     </div>
                     <div
-                      className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-32 sm:h-40 md:h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
                           src: "/projects/urban-yuan/urban-yuan-4.png",
@@ -528,7 +528,7 @@ export default function UrbanYuan() {
                       />
                     </div>
                     <div
-                      className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-32 sm:h-40 md:h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
                           src: "/projects/urban-yuan/urban-yuan-5.png",
@@ -544,7 +544,7 @@ export default function UrbanYuan() {
                       />
                     </div>
                     <div
-                      className="relative h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-32 sm:h-40 md:h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
                           src: "/projects/urban-yuan/urban-yuan-6.png",
@@ -564,7 +564,7 @@ export default function UrbanYuan() {
                   {/* Mixed Layout Row */}
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
                     <div
-                      className="relative h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-48 sm:h-56 md:h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
                           src: "/projects/urban-yuan/urban-yuan-7.png",
@@ -580,7 +580,7 @@ export default function UrbanYuan() {
                       />
                     </div>
                     <div
-                      className="lg:col-span-2 relative h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="lg:col-span-2 relative h-48 sm:h-56 md:h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
                           src: "/projects/urban-yuan/urban-yuan-8.png",
@@ -598,9 +598,9 @@ export default function UrbanYuan() {
                   </div>
 
                   {/* Final Gallery Row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
                     <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-32 sm:h-36 md:h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
                           src: "/projects/urban-yuan/urban-yuan-9.png",
@@ -616,7 +616,7 @@ export default function UrbanYuan() {
                       />
                     </div>
                     <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-32 sm:h-36 md:h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
                           src: "/projects/urban-yuan/urban-yuan-10.png",
@@ -632,7 +632,7 @@ export default function UrbanYuan() {
                       />
                     </div>
                     <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-32 sm:h-36 md:h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
                           src: "/projects/urban-yuan/urban-yuan-11.png",
@@ -648,7 +648,7 @@ export default function UrbanYuan() {
                       />
                     </div>
                     <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-32 sm:h-36 md:h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
                           src: "/projects/urban-yuan/urban-yuan-12.png",
@@ -664,7 +664,7 @@ export default function UrbanYuan() {
                       />
                     </div>
                     <div
-                      className="relative h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-32 sm:h-36 md:h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
                           src: "/projects/urban-yuan/urban-yuan-13.png",
@@ -683,18 +683,18 @@ export default function UrbanYuan() {
                 </div>
 
                 <div className="pt-8">
-                  <div className="flex space-x-4 mb-8">
+                  <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mb-8">
                     <Link
                       href="https://urban-yuan.vercel.app"
                       target="_blank"
-                      className="bg-yellow-100 text-zinc-900 px-8 py-3 rounded-lg font-semibold hover:bg-zinc-200 transition-colors duration-300"
+                      className="bg-yellow-100 text-zinc-900 px-8 py-3 rounded-lg font-semibold hover:bg-zinc-200 transition-colors duration-300 w-full sm:w-auto text-center"
                     >
                       View Live Project
                     </Link>
                     <Link
                       href="https://github.com/yuanthio/urban-yuan"
                       target="_blank"
-                      className="border-2 border-yellow-100 text-yellow-100 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-100 hover:text-zinc-900 transition-all duration-300"
+                      className="border-2 border-yellow-100 text-yellow-100 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-100 hover:text-zinc-900 transition-all duration-300 w-full sm:w-auto text-center"
                     >
                       View Source Code
                     </Link>

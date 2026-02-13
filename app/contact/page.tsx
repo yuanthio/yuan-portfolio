@@ -45,21 +45,30 @@ export default function Contact() {
     <div className="h-screen bg-zinc-900">
       <div className="h-screen flex bg-yellow-100 text-zinc-900 animate-slide-up overflow-hidden">
         <Navbar />
-        <div className="flex w-1/2 items-center px-6">
-          <div className="flex flex-col space-y-4" data-aos="fade-down" data-aos-delay="800">
-            <h1 
-              className={`font-semibold uppercase text-8xl ${montserrat.className}`}
-            >
-              Contact
-            </h1>
-            <p 
-              className={montserrat.className}
-            >
-              Get in touch with me for collaborations, opportunities, or just to say hello. I'm always excited to connect with new people and discuss interesting projects.
-            </p>
-            <div>
-            <p className={montserrat.className}>Email: <a href="mailto:yuanthiovirly26.9a.tik@gmail.com" className="underline decoration-2">yuanthiovirly26.9a.tik@gmail.com</a></p>
-            <p className={montserrat.className}>On the internet: <a href="https://github.com/yuanthiovirly" target="_blank" rel="noopener noreferrer" className="underline decoration-2">GitHub</a> | <a href="https://www.linkedin.com/in/yuanthio-virly/" target="_blank" rel="noopener noreferrer" className="underline decoration-2">LinkedIn</a> | <a href="https://instagram.com/yuanthiovirly" target="_blank" rel="noopener noreferrer" className="underline decoration-2">Instagram</a></p>
+        <div className="flex flex-col md:flex-row w-full h-full">
+          <div className="flex-1 flex items-center px-6 py-8">
+            <div className="flex flex-col space-y-6 max-w-2xl" data-aos="fade-down" data-aos-delay="800">
+              <h1 
+                className={`font-semibold uppercase text-4xl sm:text-5xl md:text-6xl lg:text-8xl ${montserrat.className}`}
+              >
+                Contact
+              </h1>
+              <p 
+                className={`${montserrat.className} text-base sm:text-lg md:text-xl lg:text-2xl`}
+              >
+                Get in touch with me for collaborations, opportunities, or just to say hello. I'm always excited to connect with new people and discuss interesting projects.
+              </p>
+              <div className="space-y-3">
+                <p className={`${montserrat.className} text-sm sm:text-base md:text-lg`}>
+                  Email: <a href="mailto:yuanthiovirly26.9a.tik@gmail.com" className="underline decoration-2 hover:text-yellow-600 transition-colors">yuanthiovirly26.9a.tik@gmail.com</a>
+                </p>
+                <p className={`${montserrat.className} text-sm sm:text-base md:text-lg`}>
+                  On the internet: 
+                  <a href="https://github.com/yuanthiovirly" target="_blank" rel="noopener noreferrer" className="underline decoration-2 hover:text-yellow-600 transition-colors ml-1">GitHub</a> | 
+                  <a href="https://www.linkedin.com/in/yuanthio-virly/" target="_blank" rel="noopener noreferrer" className="underline decoration-2 hover:text-yellow-600 transition-colors ml-1">LinkedIn</a> | 
+                  <a href="https://instagram.com/yuanthiovirly" target="_blank" rel="noopener noreferrer" className="underline decoration-2 hover:text-yellow-600 transition-colors ml-1">Instagram</a>
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ export default function HomeNavbar() {
     <div className="fixed left-0 top-0 h-full w-16 bg-zinc-900 text-yellow-100 flex flex-col items-center justify-between py-8 z-30">
       <div className="flex flex-col items-center space-y-6">
         <Link 
-          href="https://github.com" 
+          href="https://github.com/yuanthio" 
           target="_blank"
           rel="noopener noreferrer"
           className="text-yellow-100 hover:text-yellow-200 transition-colors duration-300"
@@ -17,7 +17,7 @@ export default function HomeNavbar() {
         </Link>
         
         <Link 
-          href="https://linkedin.com" 
+          href="https://www.linkedin.com/in/yuanthio-virly/" 
           target="_blank"
           rel="noopener noreferrer"
           className="text-yellow-100 hover:text-yellow-200 transition-colors duration-300"
@@ -29,7 +29,7 @@ export default function HomeNavbar() {
         </Link>
         
         <Link 
-          href="https://instagram.com" 
+          href="https://www.instagram.com/yuanthio_?igsh=M3p0azRqNTN3MW1p" 
           target="_blank"
           rel="noopener noreferrer"
           className="text-yellow-100 hover:text-yellow-200 transition-colors duration-300"

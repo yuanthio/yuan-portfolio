@@ -288,11 +288,11 @@ export default function CircleApp() {
         </div>
       )}
 
-      <div className="h-screen flex gap-8 bg-zinc-900 text-yellow-100 overflow-hidden">
+      <div className="h-screen flex bg-zinc-900 text-yellow-100 overflow-hidden">
         <Navbar darkMode={true} menuText="Projects" menuHref="/projects" />
         <div className="flex flex-1 justify-center overflow-hidden">
-          <div className="w-full max-w-4xl flex-col px-6 py-30 overflow-y-auto scrollbar-hide">
-            <div className="flex flex-col space-y-8">
+          <div className="w-full max-w-4xl flex-col px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 overflow-y-auto scrollbar-hide">
+            <div className="flex flex-col space-y-6 sm:space-y-8">
               <div data-aos="fade-down" data-aos-delay="200">
                 <Link
                   href="/projects"
@@ -301,14 +301,14 @@ export default function CircleApp() {
                   ← Back to Projects
                 </Link>
                 <h1
-                  className={`font-bold uppercase text-8xl ${montserrat.className}`}
+                  className={`font-bold uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl ${montserrat.className}`}
                 >
                   Circle App
                 </h1>
                 <p
-                  className={`text-2xl font-semibold ${montserrat.className} mt-2`}
+                  className={`text-lg sm:text-xl md:text-2xl font-semibold ${montserrat.className} mt-2`}
                 >
-                  Social Community Platform for Interest-Based Groups
+                  Social Media Platform for Creative Communities
                 </p>
               </div>
 
@@ -319,12 +319,12 @@ export default function CircleApp() {
               >
                 <div>
                   <h2
-                    className={`text-3xl font-bold ${montserrat.className} mb-4`}
+                    className={`text-2xl sm:text-3xl font-bold ${montserrat.className} mb-4`}
                   >
                     Project Overview
                   </h2>
                   <p
-                    className={`text-lg ${montserrat.className} text-zinc-300`}
+                    className={`text-sm sm:text-base md:text-lg ${montserrat.className} text-zinc-300`}
                   >
                     Circle App is a web-based real-time social platform inspired
                     by Twitter, featuring live posts, community circles, and
@@ -339,12 +339,12 @@ export default function CircleApp() {
 
                 <div>
                   <h2
-                    className={`text-3xl font-bold ${montserrat.className} mb-4`}
+                    className={`text-2xl sm:text-3xl font-bold ${montserrat.className} mb-4`}
                   >
                     Key Features
                   </h2>
                   <ul
-                    className={`space-y-2 ${montserrat.className} text-zinc-300`}
+                    className={`space-y-2 ${montserrat.className} text-sm sm:text-base md:text-lg text-zinc-300`}
                   >
                     <li>
                       • Real-time posts and live interaction using WebSockets
@@ -362,7 +362,7 @@ export default function CircleApp() {
 
                 <div>
                   <h2
-                    className={`text-3xl font-bold ${montserrat.className} mb-4`}
+                    className={`text-2xl sm:text-3xl font-bold ${montserrat.className} mb-4`}
                   >
                     Technologies Used
                   </h2>
@@ -390,30 +390,30 @@ export default function CircleApp() {
 
                 <div>
                   <h2
-                    className={`text-3xl font-bold ${montserrat.className} mb-4`}
+                    className={`text-2xl sm:text-3xl font-bold ${montserrat.className} mb-4`}
                   >
                     Project Highlights
                   </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="bg-zinc-800 text-yellow-100 p-6 rounded-lg">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                    <div className="bg-zinc-800 text-yellow-100 p-4 sm:p-6 rounded-lg">
                       <h3
-                        className={`text-xl font-semibold ${montserrat.className} mb-2`}
+                        className={`text-lg sm:text-xl font-semibold ${montserrat.className} mb-2`}
                       >
                         Real-Time Communication
                       </h3>
-                      <p className={`${montserrat.className} text-zinc-300`}>
+                      <p className={`${montserrat.className} text-sm sm:text-base text-zinc-300`}>
                         Leveraging WebSockets, Circle App supports real-time
                         posts and instant interactions, creating a live social
                         experience.
                       </p>
                     </div>
-                    <div className="bg-zinc-800 text-yellow-100 p-6 rounded-lg">
+                    <div className="bg-zinc-800 text-yellow-100 p-4 sm:p-6 rounded-lg">
                       <h3
-                        className={`text-xl font-semibold ${montserrat.className} mb-2`}
+                        className={`text-lg sm:text-xl font-semibold ${montserrat.className} mb-2`}
                       >
                         Scalable Architecture
                       </h3>
-                      <p className={`${montserrat.className} text-zinc-300`}>
+                      <p className={`${montserrat.className} text-sm sm:text-base text-zinc-300`}>
                         With Redis caching and Dockerized deployment, the
                         application is built for performance, reliability, and
                         easy development setup.
@@ -424,7 +424,7 @@ export default function CircleApp() {
 
                 <div>
                   <h2
-                    className={`text-3xl font-bold ${montserrat.className} mb-4`}
+                    className={`text-2xl sm:text-3xl font-bold ${montserrat.className} mb-4`}
                   >
                     Project Gallery
                   </h2>
@@ -432,7 +432,7 @@ export default function CircleApp() {
                   {/* Hero Gallery Row */}
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
                     <div
-                      className="relative h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-64 sm:h-80 lg:h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
                           src: "/projects/circle-app/circle-app-1.png",
@@ -448,7 +448,7 @@ export default function CircleApp() {
                       />
                     </div>
                     <div
-                      className="relative h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-64 sm:h-80 lg:h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
                           src: "/projects/circle-app/circle-app-2.png",
@@ -466,9 +466,9 @@ export default function CircleApp() {
                   </div>
 
                   {/* Feature Showcase Row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div
-                      className="relative h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-40 sm:h-48 md:h-56 lg:h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
                           src: "/projects/circle-app/circle-app-3.png",
@@ -484,7 +484,7 @@ export default function CircleApp() {
                       />
                     </div>
                     <div
-                      className="relative h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-40 sm:h-48 md:h-56 lg:h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
                           src: "/projects/circle-app/circle-app-4.png",
@@ -503,18 +503,18 @@ export default function CircleApp() {
                 </div>
 
                 <div className="pt-8">
-                  <div className="flex space-x-4 mb-8">
+                  <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mb-8">
                     <Link
                       href="#"
                       target="_blank"
-                      className="bg-yellow-100 text-zinc-900 px-8 py-3 rounded-lg font-semibold hover:bg-zinc-200 transition-colors duration-300"
+                      className="bg-yellow-100 text-zinc-900 px-8 py-3 rounded-lg font-semibold hover:bg-zinc-200 transition-colors duration-300 w-full sm:w-auto text-center"
                     >
                       View Live Project
                     </Link>
                     <Link
                       href="https://github.com/yuanthio/circle-app"
                       target="_blank"
-                      className="border-2 border-yellow-100 text-yellow-100 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-100 hover:text-zinc-900 transition-all duration-300"
+                      className="border-2 border-yellow-100 text-yellow-100 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-100 hover:text-zinc-900 transition-all duration-300 w-full sm:w-auto text-center"
                     >
                       View Source Code
                     </Link>
@@ -553,7 +553,7 @@ export default function CircleApp() {
 
                     <Link
                       href="/projects"
-                      className="flex items-center space-x-2 text-zinc-400 hover:text-yellow-100 transition-colors duration-300"
+                      className="hidden sm:flex items-center space-x-2 text-zinc-400 hover:text-yellow-100 transition-colors duration-300"
                     >
                       <svg
                         className="w-5 h-5"
