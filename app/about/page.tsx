@@ -68,7 +68,7 @@ export default function About() {
                   </div>
                 </div>
                 <p className={`text-xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold ${montserrat.className}`}>
-                  I'm Yuan. A fullstack developer, creator and problem solver.
+                  I'm Yuan. A fullstack developer and problem solver.
                 </p>
               </div>
               
