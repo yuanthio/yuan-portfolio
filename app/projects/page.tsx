@@ -107,11 +107,11 @@ export default function Projects() {
                   Sipresmagmth34
                 </h1>
               </Link>
-              <Link href="/contact">
+              <Link href="/projects/medikonsul">
                 <h1
                   className={`${montserrat.className} font-semibold text-2xl md:text-4xl lg:text-5xl uppercase transition-all duration-300 hover:text-yellow-600 cursor-pointer`}
                 >
-                  Dinow
+                  MediKonsul
                 </h1>
               </Link>
             </div>

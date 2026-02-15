@@ -12,7 +12,7 @@ import Navbar from "@/components/global/Navbar";
 const montserrat = Montserrat({ subsets: ["latin"] });
 const grandslang = Grandstander({ subsets: ["latin"] });
 
-export default function Sipresmagmth34() {
+export default function Medikonsul() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedImage, setSelectedImage] = useState<{
     src: string;
@@ -23,62 +23,55 @@ export default function Sipresmagmth34() {
 
   const allImages = [
     {
-      src: "/projects/sipresmagmth34/sipresmagmth34-1.png",
-      alt: "Sipresmagmth34 Dashboard",
+      src: "/projects/medikonsul/medikonsul-1.png",
+      alt: "Medikonsul Dashboard",
     },
     {
-      src: "/projects/sipresmagmth34/sipresmagmth34-2.png",
-      alt: "Sipresmagmth34 Data Management",
+      src: "/projects/medikonsul/medikonsul-2.png",
+      alt: "Medikonsul Patient Data",
     },
     {
-      src: "/projects/sipresmagmth34/sipresmagmth34-3.png",
-      alt: "Sipresmagmth34 Analytics View",
+      src: "/projects/medikonsul/medikonsul-3.png",
+      alt: "Medikonsul Medical Records",
     },
     {
-      src: "/projects/sipresmagmth34/sipresmagmth34-4.png",
-      alt: "Sipresmagmth34 User Interface",
+      src: "/projects/medikonsul/medikonsul-4.png",
+      alt: "Medikonsul Appointment System",
     },
     {
-      src: "/projects/sipresmagmth34/sipresmagmth34-5.png",
-      alt: "Sipresmagmth34 Settings",
+      src: "/projects/medikonsul/medikonsul-5.png",
+      alt: "Medikonsul Prescription Management",
     },
     {
-      src: "/projects/sipresmagmth34/sipresmagmth34-6.png",
-      alt: "Sipresmagmth34 Reports",
+      src: "/projects/medikonsul/medikonsul-6.png",
+      alt: "Medikonsul Laboratory Results",
     },
     {
-      src: "/projects/sipresmagmth34/sipresmagmth34-7.png",
-      alt: "Sipresmagmth34 Mobile View",
+      src: "/projects/medikonsul/medikonsul-7.png",
+      alt: "Medikonsul Patient Registration",
     },
     {
-      src: "/projects/sipresmagmth34/sipresmagmth34-8.png",
-      alt: "Sipresmagmth34 Integration",
-    },
-    {
-      src: "/projects/sipresmagmth34/sipresmagmth34-9.png",
-      alt: "Sipresmagmth34 Documentation",
-    },
-    {
-      src: "/projects/sipresmagmth34/sipresmagmth34-10.png",
-      alt: "Sipresmagmth34 Performance Metrics",
+      src: "/projects/medikonsul/medikonsul-8.png",
+      alt: "Medikonsul Billing System",
     },
   ];
 
   const projects = [
     { name: "Urban Yuan", href: "/projects/urban-yuan" },
     { name: "Job Matcher", href: "/projects/job-matcher" },
-    { name: "Life Admin", href: "/projects/life-admin-assistant" },
-    { name: "Circle App", href: "/projects/circle-app" },
+    { name: "Life Admin", href: "/about" },
+    { name: "Dinow", href: "/contact" },
+    { name: "Circle App", href: "/contact" },
     { name: "Sipresmagmth34", href: "/projects/sipresmagmth34" },
-    { name: "MediKonsul", href: "/projects/medikonsul" },
+    { name: "Medikonsul", href: "/projects/medikonsul" },
   ];
 
   const currentIndex = projects.findIndex(
-    (p) => p.href === "/projects/sipresmagmth34",
+    (p) => p.href === "/projects/medikonsul",
   );
-  const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
+  const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : projects[projects.length - 1];
   const nextProject =
-    currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
+    currentIndex < projects.length - 1 ? projects[currentIndex + 1] : projects[0];
 
   const openLightbox = (image: { src: string; alt: string }) => {
     setSelectedImage(image);
@@ -196,7 +189,7 @@ export default function Sipresmagmth34() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="lightbox-scroll-container relative w-full h-full overflow-auto scrollbar-hide">
-              <div className="flex items-start justify-center min-h-full py-8">
+              <div className="flex items-center justify-center min-h-full py-8">
                 <Image
                   src={selectedImage.src}
                   alt={selectedImage.alt}
@@ -239,7 +232,7 @@ export default function Sipresmagmth34() {
                 className={`absolute right-4 text-white bg-black bg-opacity-70 rounded-full p-3 hover:bg-opacity-85 transition-all duration-300 hover:scale-110 ${
                   isLightboxOpen
                     ? "translate-x-0 opacity-100"
-                    : "translate-x-2 opacity-0"
+                    : "-translate-x-2 opacity-0"
                 }`}
                 style={{ top: `calc(50% + ${scrollPosition}px)` }}
                 onClick={(e) => {
@@ -295,7 +288,7 @@ export default function Sipresmagmth34() {
                 className={`absolute text-white bg-black bg-opacity-70 px-4 py-2 rounded-full text-sm transition-all duration-300 ${
                   isLightboxOpen
                     ? "translate-y-0 opacity-100"
-                    : "translate-y-2 opacity-0"
+                    : "-translate-y-2 opacity-0"
                 }`}
                 style={{
                   bottom: `${32 - scrollPosition}px`,
@@ -325,14 +318,14 @@ export default function Sipresmagmth34() {
                   ← Back to Projects
                 </Link>
                 <h1
-                  className={`font-bold uppercase text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl ${montserrat.className}`}
+                  className={`font-bold uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl ${montserrat.className}`}
                 >
-                  Sipresmagmth34
+                  Medikonsul
                 </h1>
                 <p
                   className={`text-lg sm:text-xl md:text-2xl font-semibold ${montserrat.className} mt-2`}
                 >
-                  Web-Based Attendance System with Face Recognition
+                  Online Health Consultation Booking Platform
                 </p>
               </div>
 
@@ -350,12 +343,13 @@ export default function Sipresmagmth34() {
                   <p
                     className={`text-sm sm:text-base md:text-lg ${montserrat.className} text-zinc-300`}
                   >
-                    SIPRESMAGMTH34 is a web-based attendance system developed
-                    for interns at BPK DKI Jakarta. It features face recognition
-                    for identity verification, geo-location based attendance
-                    validation with radius restriction, and multi-role access
-                    control. The system supports administrators, interns, and
-                    mentors with tailored access and workflows
+                    MediKonsul is a web-based online health consultation booking
+                    platform built with Laravel. The system allows patients to
+                    schedule consultation sessions easily, while administrators
+                    can manage booking periods, consultation durations, and
+                    monitor incoming appointment requests. The platform focuses
+                    on simplicity, efficiency, and accessibility for both
+                    patients and administrators.
                   </p>
                 </div>
 
@@ -368,19 +362,19 @@ export default function Sipresmagmth34() {
                   <ul
                     className={`space-y-2 ${montserrat.className} text-sm sm:text-base md:text-lg text-zinc-300`}
                   >
+                    <li>• Online health consultation booking system</li>
                     <li>
-                      • Real-time face recognition attendance verification
+                      • Automatic email notifications for booking confirmation
                     </li>
+                    <li>• Responsive and user-friendly patient interface</li>
                     <li>
-                      • Geo-location attendance validation with configurable
-                      radius
+                      • Admin dashboard for managing consultation schedules
                     </li>
+                    <li>• Custom consultation session duration settings</li>
+                    <li>• Booking period control (open/close system)</li>
                     <li>
-                      • Multi-role access control (Administrator, Intern,
-                      Mentor)
+                      • Monitoring and managing incoming appointment requests
                     </li>
-                    <li>• Responsive user interface for desktop and mobile</li>
-                    <li>• Database driven with MySQL backend</li>
                   </ul>
                 </div>
 
@@ -392,14 +386,12 @@ export default function Sipresmagmth34() {
                   </h2>
                   <div className="flex flex-wrap gap-2">
                     {[
-                      "PHP (Native)",
-                      "HTML & CSS",
-                      "JavaScript",
-                      "Bootstrap",
-                      "jQuery",
+                      "Laravel",
+                      "PHP",
                       "MySQL",
-                      "Face API.js",
-                      "Leaflet.js",
+                      "Blade Templating",
+                      "Tailwind CSS",
+                      "Laravel Mail (SMTP)",
                     ].map((tech) => (
                       <span
                         key={tech}
@@ -413,42 +405,7 @@ export default function Sipresmagmth34() {
 
                 <div>
                   <h2
-                    className={`text-2xl sm:text-3xl font-bold ${montserrat.className} mb-4`}
-                  >
-                    Project Highlights
-                  </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                    <div className="bg-zinc-800 text-yellow-100 p-4 sm:p-6 rounded-lg">
-                      <h3
-                        className={`text-lg sm:text-xl font-semibold ${montserrat.className} mb-2`}
-                      >
-                        High-Performance Data Processing
-                      </h3>
-                      <p className={`${montserrat.className} text-sm sm:text-base text-zinc-300`}>
-                        Implements distributed computing architecture to handle
-                        millions of data points efficiently, ensuring real-time
-                        analytics and minimal latency for critical operations.
-                      </p>
-                    </div>
-                    <div className="bg-zinc-800 text-yellow-100 p-4 sm:p-6 rounded-lg">
-                      <h3
-                        className={`text-lg sm:text-xl font-semibold ${montserrat.className} mb-2`}
-                      >
-                        Intelligent Data Visualization
-                      </h3>
-                      <p className={`${montserrat.className} text-sm sm:text-base text-zinc-300`}>
-                        Features advanced charting and graphing capabilities
-                        with interactive elements, allowing users to explore
-                        complex datasets through intuitive visual
-                        representations.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <h2
-                    className={`text-2xl sm:text-3xl font-bold ${montserrat.className} mb-4`}
+                    className={`text-3xl font-bold ${montserrat.className} mb-4`}
                   >
                     Project Gallery
                   </h2>
@@ -459,14 +416,14 @@ export default function Sipresmagmth34() {
                       className="lg:col-span-2 relative h-64 sm:h-80 lg:h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/sipresmagmth34/sipresmagmth34-1.png",
-                          alt: "Sipresmagmth34 Dashboard",
+                          src: "/projects/medikonsul/medikonsul-1.png",
+                          alt: "Medikonsul Dashboard",
                         })
                       }
                     >
                       <Image
-                        src="/projects/sipresmagmth34/sipresmagmth34-1.png"
-                        alt="Sipresmagmth34 Dashboard"
+                        src="/projects/medikonsul/medikonsul-1.png"
+                        alt="Medikonsul Dashboard"
                         fill
                         className="object-cover"
                       />
@@ -475,14 +432,14 @@ export default function Sipresmagmth34() {
                       className="relative h-64 sm:h-80 lg:h-96 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/sipresmagmth34/sipresmagmth34-2.png",
-                          alt: "Sipresmagmth34 Data Management",
+                          src: "/projects/medikonsul/medikonsul-2.png",
+                          alt: "Medikonsul Patient Data",
                         })
                       }
                     >
                       <Image
-                        src="/projects/sipresmagmth34/sipresmagmth34-2.png"
-                        alt="Sipresmagmth34 Data Management"
+                        src="/projects/medikonsul/medikonsul-2.png"
+                        alt="Medikonsul Patient Data"
                         fill
                         className="object-cover"
                       />
@@ -490,19 +447,19 @@ export default function Sipresmagmth34() {
                   </div>
 
                   {/* Feature Showcase Row */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                     <div
                       className="relative h-32 sm:h-40 md:h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/sipresmagmth34/sipresmagmth34-3.png",
-                          alt: "Sipresmagmth34 Analytics View",
+                          src: "/projects/medikonsul/medikonsul-3.png",
+                          alt: "Medikonsul Medical Records",
                         })
                       }
                     >
                       <Image
-                        src="/projects/sipresmagmth34/sipresmagmth34-3.png"
-                        alt="Sipresmagmth34 Analytics View"
+                        src="/projects/medikonsul/medikonsul-3.png"
+                        alt="Medikonsul Medical Records"
                         fill
                         className="object-cover"
                       />
@@ -511,14 +468,14 @@ export default function Sipresmagmth34() {
                       className="relative h-32 sm:h-40 md:h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/sipresmagmth34/sipresmagmth34-4.png",
-                          alt: "Sipresmagmth34 User Interface",
+                          src: "/projects/medikonsul/medikonsul-4.png",
+                          alt: "Medikonsul Appointment System",
                         })
                       }
                     >
                       <Image
-                        src="/projects/sipresmagmth34/sipresmagmth34-4.png"
-                        alt="Sipresmagmth34 User Interface"
+                        src="/projects/medikonsul/medikonsul-4.png"
+                        alt="Medikonsul Appointment System"
                         fill
                         className="object-cover"
                       />
@@ -527,98 +484,66 @@ export default function Sipresmagmth34() {
                       className="relative h-32 sm:h-40 md:h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/sipresmagmth34/sipresmagmth34-5.png",
-                          alt: "Sipresmagmth34 Settings",
+                          src: "/projects/medikonsul/medikonsul-5.png",
+                          alt: "Medikonsul Prescription Management",
                         })
                       }
                     >
                       <Image
-                        src="/projects/sipresmagmth34/sipresmagmth34-5.png"
-                        alt="Sipresmagmth34 Settings"
+                        src="/projects/medikonsul/medikonsul-5.png"
+                        alt="Medikonsul Prescription Management"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div
+                      className="relative h-32 sm:h-40 md:h-48 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      onClick={() =>
+                        openLightbox({
+                          src: "/projects/medikonsul/medikonsul-6.png",
+                          alt: "Medikonsul Laboratory Results",
+                        })
+                      }
+                    >
+                      <Image
+                        src="/projects/medikonsul/medikonsul-6.png"
+                        alt="Medikonsul Laboratory Results"
                         fill
                         className="object-cover"
                       />
                     </div>
                   </div>
 
-                  {/* Additional Gallery Row */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-4">
+                  {/* Mixed Layout Row */}
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
                     <div
-                      className="relative h-28 sm:h-32 md:h-36 lg:h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="relative h-48 sm:h-56 md:h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/sipresmagmth34/sipresmagmth34-6.png",
-                          alt: "Sipresmagmth34 Reports",
+                          src: "/projects/medikonsul/medikonsul-7.png",
+                          alt: "Medikonsul Patient Registration",
                         })
                       }
                     >
                       <Image
-                        src="/projects/sipresmagmth34/sipresmagmth34-6.png"
-                        alt="Sipresmagmth34 Reports"
+                        src="/projects/medikonsul/medikonsul-7.png"
+                        alt="Medikonsul Patient Registration"
                         fill
                         className="object-cover"
                       />
                     </div>
                     <div
-                      className="relative h-28 sm:h-32 md:h-36 lg:h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      className="lg:col-span-2 relative h-48 sm:h-56 md:h-64 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
                       onClick={() =>
                         openLightbox({
-                          src: "/projects/sipresmagmth34/sipresmagmth34-7.png",
-                          alt: "Sipresmagmth34 Mobile View",
+                          src: "/projects/medikonsul/medikonsul-8.png",
+                          alt: "Medikonsul Billing System",
                         })
                       }
                     >
                       <Image
-                        src="/projects/sipresmagmth34/sipresmagmth34-7.png"
-                        alt="Sipresmagmth34 Mobile View"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-28 sm:h-32 md:h-36 lg:h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/sipresmagmth34/sipresmagmth34-8.png",
-                          alt: "Sipresmagmth34 Integration",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/sipresmagmth34/sipresmagmth34-8.png"
-                        alt="Sipresmagmth34 Integration"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-28 sm:h-32 md:h-36 lg:h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/sipresmagmth34/sipresmagmth34-9.png",
-                          alt: "Sipresmagmth34 Documentation",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/sipresmagmth34/sipresmagmth34-9.png"
-                        alt="Sipresmagmth34 Documentation"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div
-                      className="relative h-28 sm:h-32 md:h-36 lg:h-40 bg-yellow-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-                      onClick={() =>
-                        openLightbox({
-                          src: "/projects/sipresmagmth34/sipresmagmth34-10.png",
-                          alt: "Sipresmagmth34 Performance Metrics",
-                        })
-                      }
-                    >
-                      <Image
-                        src="/projects/sipresmagmth34/sipresmagmth34-10.png"
-                        alt="Sipresmagmth34 Performance Metrics"
+                        src="/projects/medikonsul/medikonsul-8.png"
+                        alt="Medikonsul Billing System"
                         fill
                         className="object-cover"
                       />
@@ -629,14 +554,14 @@ export default function Sipresmagmth34() {
                 <div className="pt-8">
                   <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mb-8">
                     <Link
-                      href="https://sipresmagmth34.com/"
+                      href="http://medikonsul.rf.gd/"
                       target="_blank"
                       className="bg-yellow-100 text-zinc-900 px-8 py-3 rounded-lg font-semibold hover:bg-zinc-200 transition-colors duration-300 w-full sm:w-auto text-center"
                     >
                       View Live Project
                     </Link>
                     <Link
-                      href="https://github.com/yuanthio/sipresmagmth34"
+                      href="https://github.com/yuanthio/medikonsul"
                       target="_blank"
                       className="border-2 border-yellow-100 text-yellow-100 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-100 hover:text-zinc-900 transition-all duration-300 w-full sm:w-auto text-center"
                     >
@@ -674,26 +599,6 @@ export default function Sipresmagmth34() {
                         </div>
                       </Link>
                     )}
-
-                    <Link
-                      href="/projects"
-                      className="hidden sm:flex items-center space-x-2 text-zinc-400 hover:text-yellow-100 transition-colors duration-300"
-                    >
-                      <svg
-                        className="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M4 6h16M4 12h16M4 18h16"
-                        />
-                      </svg>
-                      <span>All Projects</span>
-                    </Link>
 
                     {nextProject && (
                       <Link

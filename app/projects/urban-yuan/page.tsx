@@ -82,12 +82,13 @@ export default function UrbanYuan() {
     { name: "Life Admin", href: "/about" },
     { name: "Dinow", href: "/contact" },
     { name: "Circle App", href: "/contact" },
-    { name: "Sipresmagmth34", href: "/contact" },
+    { name: "Sipresmagmth34", href: "/projects/sipresmagmth34" },
+    { name: "Medikonsul", href: "/projects/medikonsul" },
   ];
 
   const currentIndex = projects.findIndex(p => p.href === "/projects/urban-yuan");
-  const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
-  const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
+  const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : projects[projects.length - 1];
+  const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : projects[0];
 
   const openLightbox = (image: { src: string; alt: string }) => {
     setSelectedImage(image);
@@ -728,26 +729,6 @@ export default function UrbanYuan() {
                         </div>
                       </Link>
                     )}
-                    
-                    <Link
-                      href="/projects"
-                      className="flex items-center space-x-2 text-zinc-400 hover:text-yellow-100 transition-colors duration-300"
-                    >
-                      <svg
-                        className="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M4 6h16M4 12h16M4 18h16"
-                        />
-                      </svg>
-                      <span>All Projects</span>
-                    </Link>
 
                     {nextProject && (
                       <Link
